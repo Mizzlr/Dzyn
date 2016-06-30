@@ -3,13 +3,13 @@ function config = getConfig(index)
 
 	config1.ndisc = 4;
 	config1.ncont = 2;
-	config1.nintr = 0;
+	config1.nintr = 2;
 
 
 	config1.ncols = 1 + config1.ndisc + config1.ncont + config1.nintr;
 	config1.nrows = pow2((config1.ndisc + config1.ncont));
 
-	config1.intrs = {}; % {[1,2]}; %[3,3]}; %,[1,1,2]};
+	config1.intrs = {[1,2], [3,3]}; %,[1,1,2]};
 
 	config1.beta = -3 + 6 * rand(config1.ncols,1); % between U(-3,3)
 	config1.lb = ones(config1.ndisc + config1.ncont,1) * -1;
@@ -20,7 +20,7 @@ function config = getConfig(index)
 	% MSMA hyperparameters
 	config1.popSize = 30;
 
-	config1.maxReset = 20;
+	config1.maxReset = 2;
 	config1.maxIter1 = 10;
 	config1.maxIter2 = 5;
 

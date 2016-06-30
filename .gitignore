@@ -1,2 +1,4 @@
 old/*.txt
 old/*.py
+new/octave-workspace
+logs/*

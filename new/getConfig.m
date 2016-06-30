@@ -5,6 +5,7 @@ function config = getConfig(index)
 	config1.ncont = 2;
 	config1.nintr = 0;
 
+
 	config1.ncols = 1 + config1.ndisc + config1.ncont + config1.nintr;
 	config1.nrows = pow2((config1.ndisc + config1.ncont));
 
